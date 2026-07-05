@@ -1,0 +1,71 @@
+@font-face { font-family: 'Inter'; src: url('/static/fonts/inter-regular.woff2') format('woff2'); font-weight: 400; }
+@font-face { font-family: 'Inter'; src: url('/static/fonts/inter-500.woff2') format('woff2'); font-weight: 500; }
+@font-face { font-family: 'Inter'; src: url('/static/fonts/inter-600.woff2') format('woff2'); font-weight: 600; }
+@font-face { font-family: 'Inter'; src: url('/static/fonts/inter-700.woff2') format('woff2'); font-weight: 700; }
+
+:root { --bg: #1f2025; --card: #26272c; --in: #1B1C21; --brd: #313238; --brd-hov: #45474f; --accent: #FAED5D; --text: #FFF; --muted: #B9C2CB; }
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+body { background: var(--bg); color: var(--text); min-height: 100vh; }
+
+.container { width: 100%; padding: 60px 20px; display: flex; flex-direction: column; align-items: center; }
+
+.header, .main-content { width: 100%; max-width: 800px; }
+
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 60px; position: relative; }
+
+.lang-wrapper { position: relative; display: flex; z-index: 10; }
+
+.lang-btn { background: none; border: none; cursor: pointer; display: flex; padding: 0; }
+
+.svg-icon { width: 32px; height: 32px; filter: brightness(0) saturate(100%) invert(86%) sepia(12%) saturate(225%) hue-rotate(169deg) brightness(89%) contrast(87%); }
+
+.lang-menu { position: absolute; top: 100%; left: 0; margin-top: 10px; background: var(--card); border: 1px solid var(--brd); border-radius: 12px; display: none; z-index: 1000; min-width: 120px; padding: 6px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.lang-menu.show { display: block; }
+
+.lang-option { padding: 10px 16px; font-size: 0.9rem; color: var(--muted); cursor: pointer; border-radius: 8px; }
+.lang-option:hover { background: rgba(255,255,255,0.05); color: var(--text); }
+
+.logo-wrapper { display: flex; z-index: 10; }
+.logo-img { height: 47px; width: auto; }
+
+h1 { font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 700; margin-bottom: 16px; color: var(--muted); }
+
+.text-yellow { color: var(--accent); }
+
+p { color: #A6ACB3; line-height: 1.5; margin-bottom: 40px; font-size: clamp(0.95rem, 2vw, 1.1rem); }
+
+.box { background: var(--card); border: 2px solid var(--brd); border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+
+.row { display: flex; gap: 16px; width: 100%; }
+
+.hide { display: none !important; }
+
+input, #shortUrl { flex: 1; background: var(--in); border: 1px solid var(--brd); color: #fff; padding: 18px 20px; border-radius: 12px; font-size: 1rem; }
+input:focus { outline: none; border-color: var(--brd-hov); }
+input::placeholder { color: var(--muted); opacity: 0.6; }
+
+#shortUrl { color: var(--accent); display: flex; align-items: center; font-weight: 500; word-break: break-all; }
+
+button { display: inline-flex; align-items: center; justify-content: center; font-weight: 600; border-radius: 12px; cursor: pointer; border: none; font-size: 0.95rem; padding: 0 32px; white-space: nowrap; min-height: 58px; }
+button:active { transform: scale(0.98); }
+
+#btn-submit { background: var(--accent); color: var(--in); }
+
+#copyBtn { background: #363528; color: #FAED5DFF }
+#copyBtn:hover { background: #35373E; }
+
+#notification-toast { position: fixed; left: 50%; top: 45px; transform: translateX(-50%); display: flex; justify-content: center; width: 100%; max-width: 593px; transition: opacity 0.3s ease; pointer-events: none; z-index: 9999; }
+.toast-hide { opacity: 0; }
+.toast-show { opacity: 1; pointer-events: auto; }
+
+.toast-box { background: var(--card); border: 2px solid #33363D; border-radius: 12px; height: 71px; width: 100%; display: flex; align-items: center; padding: 0 16px; gap: 14px; }
+.toast-icon-bg { background: #1B1C1E; width: 37px; height: 37px; border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.toast-check { width: 22px; height: 22px; }
+
+#toast-text { color: #A6ACB3; font-size: 15px; font-weight: 500; line-height: 1.3; }
+
+@media (max-width: 768px) { #notification-toast { padding: 0 20px; top: 45px; } }
+
+@media (max-width: 600px) { .row { flex-direction: column; } button { width: 100%; min-height: 54px !important; } input, #shortUrl { padding: 16px; } }

@@ -1,0 +1,30 @@
+{
+  "en": {
+    "nav_home": "Home",
+    "nav_support": "Support",
+    "title_part1": "Fast & ",
+    "title_part2": "Short ",
+    "title_part3": "Links",
+    "subtitle": "Instant URL shortening, stable redirection, zero clutter.",
+    "input_placeholder": "Paste your long link here...",
+    "btn_shorten": "Get Short Link",
+    "result_title": "Your Shortened URL",
+    "btn_copy": "Copy Link",
+    "btn_copied": "Copied!",
+    "error_empty": "Please enter a URL"
+  },
+  "ru": {
+    "nav_home": "Главная",
+    "nav_support": "Поддержка",
+    "title_part1": "Быстрые & ",
+    "title_part2": "Короткие ",
+    "title_part3": "Ссылки",
+    "subtitle": "Мгновенное сокращение URL, стабильный редирект и ничего лишнего.",
+    "input_placeholder": "Вставьте вашу длинную ссылку сюда...",
+    "btn_shorten": "Сократить ссылку",
+    "result_title": "Ваша короткая ссылка",
+    "btn_copy": "Копировать",
+    "btn_copied": "Скопировано!",
+    "error_empty": "Пожалуйста, введите ссылку"
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anke — Link</title>
+    <link rel="icon" type="image/svg+xml" href="/static/icons/Logo.svg">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="lang-wrapper">
+                <button class="lang-btn" onclick="toggleLangMenu(event)">
+                    <img src="/static/icons/Globe.svg" alt="Globe" class="svg-icon">
+                </button>
+                <div class="lang-menu" id="lang-menu">
+                    <div class="lang-option" onclick="setLang('ru')">Русский</div>
+                    <div class="lang-option" onclick="setLang('en')">English</div>
+                </div>
+            </div>
+
+            <div id="notification-toast" class="toast-hide">
+                <div class="toast-box">
+                    <div class="toast-icon-bg">
+                        <img src="/static/icons/Check mark.svg" alt="Check" class="toast-check">
+                    </div>
+                    <div id="toast-text"></div>
+                </div>
+            </div>
+
+            <div class="logo-wrapper">
+                <img src="/static/icons/Logo.svg" alt="Logo" class="logo-img">
+            </div>
+        </header>
+
+        <main class="main-content">
+            <h1 id="title-text"></h1>
+            <p id="sub-text"></p>
+
+            <div class="box">
+                <form id="urlForm" class="row">
+                    <input type="text" name="url" id="urlInput" required autocomplete="off">
+                    <button type="submit" id="btn-submit"></button>
+                </form>
+
+                <div id="result" class="row hide">
+                    <div id="shortUrl"></div>
+                    <button id="copyBtn"></button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
